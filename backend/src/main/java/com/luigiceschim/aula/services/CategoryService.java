@@ -2,6 +2,7 @@ package com.luigiceschim.aula.services;
 
 import com.luigiceschim.aula.dto.CategoryDTO;
 import com.luigiceschim.aula.repositories.CategoryRepository;
+import com.luigiceschim.aula.services.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,5 +20,11 @@ public class CategoryService {
         var list = repository.findAll();
 
         return list.stream().map(CategoryDTO::new).toList() ;
+    }
+
+    @Transactional(readOnly = true)
+    public CategoryDTO findById(Long id) {
+       var entity = repository.findById(id);
+        return entity.map(CategoryDTO::new).orElseThrow(() -> new EntityNotFoundException("Entidade não encontrada"));
     }
 }
