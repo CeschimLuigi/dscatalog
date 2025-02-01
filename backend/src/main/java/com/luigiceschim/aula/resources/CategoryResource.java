@@ -1,6 +1,6 @@
 package com.luigiceschim.aula.resources;
 
-import com.luigiceschim.aula.entities.Category;
+import com.luigiceschim.aula.dto.CategoryDTO;
 import com.luigiceschim.aula.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class CategoryResource {
 
 
     @GetMapping
-    public ResponseEntity<List<Category>> findAll(){
+    public ResponseEntity<List<CategoryDTO>> findAll(){
         var list = service.findAll();
 
         return ResponseEntity.ok().body(list);

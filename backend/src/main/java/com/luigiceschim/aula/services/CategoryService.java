@@ -1,6 +1,6 @@
 package com.luigiceschim.aula.services;
 
-import com.luigiceschim.aula.entities.Category;
+import com.luigiceschim.aula.dto.CategoryDTO;
 import com.luigiceschim.aula.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,9 @@ public class CategoryService {
     private CategoryRepository repository;
 
     @Transactional(readOnly = true)
-    public List<Category>findAll(){
-        return repository.findAll();
+    public List<CategoryDTO>findAll(){
+        var list = repository.findAll();
+
+        return list.stream().map(CategoryDTO::new).toList() ;
     }
 }
