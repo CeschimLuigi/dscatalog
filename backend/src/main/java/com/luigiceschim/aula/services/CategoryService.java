@@ -3,7 +3,8 @@ package com.luigiceschim.aula.services;
 import com.luigiceschim.aula.dto.CategoryDTO;
 import com.luigiceschim.aula.entities.Category;
 import com.luigiceschim.aula.repositories.CategoryRepository;
-import com.luigiceschim.aula.services.exceptions.EntityNotFoundException;
+import com.luigiceschim.aula.services.exceptions.ResourceNotFoundException;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,7 +27,7 @@ public class CategoryService {
     @Transactional(readOnly = true)
     public CategoryDTO findById(Long id) {
        var entity = repository.findById(id);
-        return entity.map(CategoryDTO::new).orElseThrow(() -> new EntityNotFoundException("Entidade não encontrada"));
+        return entity.map(CategoryDTO::new).orElseThrow(() -> new ResourceNotFoundException("Entidade não encontrada"));
     }
 
     @Transactional
@@ -35,6 +36,21 @@ public class CategoryService {
          repository.save(entity);
 
         return new CategoryDTO(entity);
+
+
+    }
+    @Transactional
+    public CategoryDTO update(Long id,CategoryDTO dto) {
+        try {
+            Category entity = repository.getReferenceById(id);
+            entity.setName(dto.getName());
+            var save= repository.save(entity);
+
+            return new CategoryDTO(entity);
+        }catch (EntityNotFoundException e){
+            throw new ResourceNotFoundException("ID not found " + id);
+        }
+
 
 
     }
