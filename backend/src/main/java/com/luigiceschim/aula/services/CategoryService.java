@@ -3,10 +3,13 @@ package com.luigiceschim.aula.services;
 import com.luigiceschim.aula.dto.CategoryDTO;
 import com.luigiceschim.aula.entities.Category;
 import com.luigiceschim.aula.repositories.CategoryRepository;
+import com.luigiceschim.aula.services.exceptions.DatabaseException;
 import com.luigiceschim.aula.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -53,5 +56,18 @@ public class CategoryService {
 
 
 
+
+
+    }
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public void delete(Long id) {
+        if (!repository.existsById(id)){
+            throw new ResourceNotFoundException("Id não encontrado");
+        }
+        try {
+            repository.deleteById(id);
+        }catch (DataIntegrityViolationException e){
+            throw new DatabaseException("Violação de integridade");
+        }
     }
 }

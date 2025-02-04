@@ -2,8 +2,11 @@ package com.luigiceschim.aula.entities;
 
 import com.luigiceschim.aula.dto.CategoryDTO;
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 
+import java.time.OffsetDateTime;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +18,15 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @CreationTimestamp
+    private OffsetDateTime createdAt;
+
+
+
+    private OffsetDateTime updatedAt;
+
+
 
     public Category() {
     }
@@ -35,6 +47,11 @@ public class Category {
         return name;
     }
 
+    @PreUpdate
+    protected void preUpdate() {
+        this.updatedAt = OffsetDateTime.now();
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -49,3 +66,8 @@ public class Category {
         return Objects.hashCode(id);
     }
 }
+
+
+
+
+

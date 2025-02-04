@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ffca713-cbbd-44e4-8712-06b6a1d2ad11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/dto/CategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/exceptions/DatabaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/entities/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/resources/CategoryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/resources/CategoryResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/resources/exceptions/ResourceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/resources/exceptions/ResourceExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/exceptions/EntityNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,16 +30,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AulaApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Projetos/Java/dscatalog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AulaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projetos/Java/dscatalog&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.luigiceschim.aula.services.exceptions" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AulaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.luigiceschim.aula.AulaApplication" />
+      <module name="aula" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luigiceschim.aula.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AulaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
