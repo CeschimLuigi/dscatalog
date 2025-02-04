@@ -3,7 +3,6 @@ package com.luigiceschim.aula.entities;
 import com.luigiceschim.aula.dto.CategoryDTO;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 
 import java.time.OffsetDateTime;
@@ -21,7 +20,6 @@ public class Category {
 
     @CreationTimestamp
     private OffsetDateTime createdAt;
-
 
 
     private OffsetDateTime updatedAt;

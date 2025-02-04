@@ -8,11 +8,12 @@ import com.luigiceschim.aula.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 
 @Service
 public class CategoryService {
@@ -21,10 +22,10 @@ public class CategoryService {
     private CategoryRepository repository;
 
     @Transactional(readOnly = true)
-    public List<CategoryDTO>findAll(){
-        var list = repository.findAll();
+    public Page<CategoryDTO> findAllPaged(PageRequest pageRequest){
+        var categoryPage = repository.findAll(pageRequest);
 
-        return list.stream().map(CategoryDTO::new).toList() ;
+        return categoryPage.map(CategoryDTO::new);
     }
 
     @Transactional(readOnly = true)
