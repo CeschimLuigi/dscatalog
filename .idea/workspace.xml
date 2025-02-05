@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ffca713-cbbd-44e4-8712-06b6a1d2ad11" name="Changes" comment="Pagination">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/entities/Product.java" afterDir="false" />
+    <list default="true" id="7ffca713-cbbd-44e4-8712-06b6a1d2ad11" name="Changes" comment="ProductRepository, service, resource, GET ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/luigiceschim/aula/services/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.luigiceschim.aula.resources" />
+      <recent name="com.luigiceschim.aula.services" />
+      <recent name="com.luigiceschim.aula.repositories" />
       <recent name="com.luigiceschim.aula.services.exceptions" />
     </key>
   </component>
@@ -93,12 +95,30 @@
       <option name="project" value="LOCAL" />
       <updated>1738685513957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Product entity,SQL SCRIPT">
+      <option name="closed" value="true" />
+      <created>1738687378652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738687378652</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ProductRepository, service, resource, GET ok">
+      <option name="closed" value="true" />
+      <created>1738704841448</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738704841448</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Auditing data" />
     <MESSAGE value="Pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagination" />
+    <MESSAGE value="Product entity,SQL SCRIPT" />
+    <MESSAGE value="ProductRepository, service, resource, GET ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProductRepository, service, resource, GET ok" />
   </component>
 </project>
