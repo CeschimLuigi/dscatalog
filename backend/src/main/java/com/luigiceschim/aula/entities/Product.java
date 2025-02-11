@@ -88,6 +88,10 @@ public class Product {
         this.imgUrl = imgUrl;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setDate(Instant date) {
         this.date = date;
     }
